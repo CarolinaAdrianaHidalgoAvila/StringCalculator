@@ -10,4 +10,10 @@ describe("Calculadora de una cadena", () => {
   it("Sumar 2 numeros separados por coma", () => {
     expect(StringCalculator("1,2")).toEqual(3);
   });
+  it("Sumar 2 numeros separados por coma", () => {
+    expect(StringCalculator("1,2")).toEqual(3);
+  });
+  it("Sumar 3 numeros separados por coma", () => {
+    expect(StringCalculator("1,2,3")).toEqual(6);
+  });
 });
