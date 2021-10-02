@@ -19,7 +19,11 @@ describe("Calculadora de una cadena", () => {
   it("Sumar numeros separados por salto", () => {
     expect(StringCalculator("1\n2,3")).toEqual(6);
   });
-  it("Sumar numeros separados por simbolo", () => {
-    expect(StringCalculator("1-2;3")).toEqual(6);
+  it("Sumar numeros separados delimitador especificado", () => {
+    expect(StringCalculator("//[-]\n 6-7-4")).toEqual(17);
   });
 });
+/* it("Sumar numeros separados por simbolo", () => {
+    expect(StringCalculator("1-2,3")).toEqual(6);
+  });
+  */
