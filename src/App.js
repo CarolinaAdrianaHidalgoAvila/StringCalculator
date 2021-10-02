@@ -38,7 +38,6 @@ function formatInput(input){
 function getDelimiter(input) {
   const delimiters = []
   const multipleDelimiterRegexp = /(?:^\/\/)?\[([^\[\]]+)\]\n?/g
-  //La "g" después de la expresión regular es una opción o indicador que realiza una búsqueda global, buscando en toda la cadena y devolviendo todas las coincidencias
   let matches = multipleDelimiterRegexp.exec(input)
   while(matches !== null){
     delimiters.push(matches[1])
@@ -48,10 +47,8 @@ function getDelimiter(input) {
     return new RegExp('['+delimiters.join('')+']')
   }
   matches = /^\/\/(.*)\n/.exec(input)
-  if(matches && matches[1]){
-    return matches[1]
-  }
   return /[\n,]/
+  
 }
 
 function getNumbers(string, delimiter){
@@ -62,6 +59,9 @@ function getNumbers(string, delimiter){
 
 function calculateSum(numbers){
   const finalSum = numbers.reduce((sum, n) =>{
+    if(n > 1000){
+      return 0
+    }
     return sum + n
   },0)
   return finalSum
