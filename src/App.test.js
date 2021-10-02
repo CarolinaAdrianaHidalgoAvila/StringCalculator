@@ -28,9 +28,7 @@ describe("Calculadora de una cadena", () => {
   it("Sumar numeros separados por 2 delimitadores especificados", () => {
     expect(StringCalculator("//[*][%]\n1*2%3*7%9")).toEqual(22);
   });
-  it("Sumar numeros excluyendo numeros mayores a 1000", () => {
-    expect(StringCalculator("1001,2")).toEqual(2);
-  });
+  
 });
 /* it("Sumar numeros separados por simbolo", () => {
     expect(StringCalculator("1-2,3")).toEqual(6);

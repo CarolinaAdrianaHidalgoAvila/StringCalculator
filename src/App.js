@@ -59,10 +59,7 @@ function getNumbers(string, delimiter){
 
 function calculateSum(numbers){
   const finalSum = numbers.reduce((sum, n) =>{
-    if(n > 1000){
-      return 0
-    }
-    return sum + n
+   
   },0)
   return finalSum
 }
